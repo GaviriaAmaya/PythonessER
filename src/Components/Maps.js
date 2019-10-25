@@ -1,6 +1,6 @@
 import React, { Component, createRef } from 'react';
 
-class GoogleMap extends Component {
+export default class GoogleMap extends Component {
 	googleMapRef = React.createRef()
 
 	
@@ -49,4 +49,3 @@ class GoogleMap extends Component {
 		)
 	}
 }
-export default GoogleMap;
