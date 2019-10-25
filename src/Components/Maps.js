@@ -44,7 +44,7 @@ export default class GoogleMap extends Component {
 			<div
 				id="google-map"
 				ref={this.googleMapRef}
-				style={{ width: '300px', height: '400px' }}
+				style={{ width: '100%', height: '100%' }}
 			/>
 		)
 	}

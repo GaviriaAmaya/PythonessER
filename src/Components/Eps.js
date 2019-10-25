@@ -5,7 +5,7 @@ export default class Epslist extends Component {
     render() {
         return(
         <form onSubmit={this.onSubmit}>
-            <input type="text" placeholder="write a task" 
+            <input type="text" placeholder="EPS" 
             name="title"
             />
             <br/>

@@ -1,22 +1,17 @@
-.App {
-  text-align: center;
+.Epslist {
+  width: 100%;
+  height: 100%;
+  flex-direction: row-reverse;
 }
 
-.App-logo {
-  height: 40vmin;
+html, body, .container, #root {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color:#006bffd1
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.lists {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
+  justify-content: flex-start;
 }
