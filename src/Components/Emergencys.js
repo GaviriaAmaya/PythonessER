@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
+import Dropdown from 'react-dropdown';
 
 export default class Emergencys extends Component {
 
     render() {
         return(
-        <form onSubmit={this.onSubmit}>
-            <input type="text" placeholder="write a task" 
-            name="title"
+        <Dropdown onSubmit={this.onSubmit}>
+            <input type="text" 
+                placeholder="Emergencia" 
+                name="title"
             />
             <br/>
-        </form>
+        </Dropdown>
     )
 }
     

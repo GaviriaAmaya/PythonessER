@@ -8,26 +8,20 @@ import Location from './Components/Location'
 import Emergencys from './Components/Emergencys';
 import Googlemaps from './Components/Maps'
 
-class App extends Component {
+export default class App extends Component {
   
   //state = {
     //tasks: 
   //}
   
   render() { 
-  return <div>
-    <h1>
-      hola
-    </h1>
-    
-    <Epslist/>
-    <br/>
-    <Location/>
-    <br/>
-    <Emergencys/>
-    <Googlemaps/>
-  </div>
+  return <div className='container'>
+      <div className='lists'>
+        <Location/>
+        <Epslist/>
+        <Emergencys/>
+      </div>
+        <Googlemaps/>
+    </div>
   } 
 }
-
-export default App;
