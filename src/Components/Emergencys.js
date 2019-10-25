@@ -4,12 +4,13 @@ export default class Emergencys extends Component {
 
     render() {
         return(
-        <form onSubmit={this.onSubmit}>
-            <input type="text" placeholder="Emergencia" 
-            name="title"
+        <buttondropdown onSubmit={this.onSubmit}>
+            <input type="text" 
+                placeholder="Emergencia" 
+                name="title"
             />
             <br/>
-        </form>
+        </buttondropdown>
     )
 }
     
