@@ -1,5 +1,5 @@
-import React, { Component, createRef } from 'react';
-
+import React, { Component } from 'react';
+let currentpos = [];
 export default class GoogleMap extends Component {
 	googleMapRef = React.createRef()
 
@@ -17,27 +17,36 @@ export default class GoogleMap extends Component {
 		});
 	}
 
+	currentposition () {
+		console.log("about to getting position");
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(function(position) {
+				currentpos.push({key: "lat", value: position.coords.latitude});
+				currentpos.push({key: "lng", value: position.coords.longitude});
+				console.log("Getting position from browser")
+			});
+		} else {
+			console.log("it doesn't work");
+			currentpos.push({key: "lat", value: 4.6097100 });
+			currentpos.push({key: "lng", value: -74.0817500});
+		}
+
+	}
+
+
 	createGoogleMap = () =>
 		new window.google.maps.Map(this.googleMapRef.current, {
 			zoom: 16,
-			center: { 
-				lat: 4.6097100,
-				lng: -74.0817500,
-			},
+			center: currentpos,
 			disableDefaultUI: false, 
 		})
 
 	createMarker = () =>
-	    //if (navigator.geolocation) {
-		//	navigator.geolocation.getCurrentPosition(function(position) {
-		//		let lati = position.coords.latitude;
-		//		let lngi = position.coords.longitude;
-		//	};
-
 		new window.google.maps.Marker({
-			position: { lat: 4.653007, lng: -74.052774 },
+			position: currentpos,
 			map: this.googleMap,
 		})
+		
 
 	render (){
 		return ( 
