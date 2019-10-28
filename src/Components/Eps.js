@@ -4,13 +4,13 @@ export default class Epslist extends Component {
 
     render() {
         return(
-        <buttondropdown onSubmit={this.onSubmit}>
+        <form onSubmit={this.onSubmit}>
             <input type="text" 
                 placeholder="EPS" 
                 name="title"
             />
             <br/>
-        </buttondropdown>
+        </form>
     )
 }
     
