@@ -125,3 +125,25 @@ VALUES
 ('Compensar - Cruz Roja Colombiana Seccional Cund. Sede:Calle145','AUTOP. Norte con Calle 145 / Avenida Carrera 45 No. 145 - 64','7460909'),
 ('Compensar - Cruz Roja Colombiana Seccional Cund. Sede:Alquería','Avenida Carrera 68 No. 31 - 41 SUR','7460909'),
 ('Cruz Roja Colombiana Seccional Cundinamarca Sede:Calle 68','Avenida Carrera 68 No. 68 B - 31','7460909');
+
+CREATE TABLE IF NOT EXISTS Sura (
+       Nombre VARCHAR(128) NOT NULL,
+       Dirección VARCHAR(128) NOT NULL,
+       Teléfono VARCHAR(128)
+);
+
+INSERT INTO Sura (
+       Nombre,
+       Dirección,
+       Teléfono
+)
+VALUES
+('Centro Medico Colsubsidio Quiroga','CL 38 SUR # 18 - 30','7607461 EXT 137'),
+('Clinica Colsubsidio - Clinica Infantil','CL 67 # 10 - 67','7450999'),
+('Clinica Juan N. Corpas','CR 111 # 159 A - 61','7423498'),
+('Clinica Retornar','AUTOPISTA NORTE (AV. 13) NO. 87-33','4846100'),
+('Corporacion Hospitalaria Juan Ciudad','CL 24 # 29 - 45','5600520-4877070'),
+('Hospital Clinica San Rafael','CR 8 # 17 SUR - 45','3289950'),
+('Clinica Odontologica Proteccion Oral Las Americas','CL 6 A # 71 B - 16','7032431'),
+('Clinica Odontologica Proteccion Oral Ltda Suba','Av Suba # 125 - 29','6139249');
+
