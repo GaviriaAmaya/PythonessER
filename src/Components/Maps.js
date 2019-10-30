@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { withGoogleMap, withScriptjs, GoogleMap, Marker, InfoWindow } from "react-google-maps";
 import * as FacilityData from "./data/ERPlaces.json";
 
@@ -8,14 +8,14 @@ function MapwithMarkers() {
   return (
     <GoogleMap
       defaultZoom={10}
-      defaultCenter={{ lat: 45.4211, lng: -75.6903 }}
+      defaultCenter={{ lat: 4.6097100, lng: -74.0817500 }}
     >
-      {FacilityData.features.map(facility => (
+      {FacilityData.IPS_list.map(facility => (
         <Marker
-          key={facility.properties.PARK_ID}
+          key={facility.IPS_name}
           position={{
-            lat: facility.coordinates.lat,
-            lng: facility.coordinates.lng
+            lat: facility.address.lat,
+            lng: facility.address.lng
           }}
           onClick={() => {
             setSelectedFacility(facility);
@@ -29,13 +29,13 @@ function MapwithMarkers() {
             setSelectedFacility(null);
           }}
           position={{
-            lat: selectedFacility.coordinates.lat,
-            lng: selectedFacility.coordinates.lng
+            lat: selectedFacility.address.lat,
+            lng: selectedFacility.address.lng
           }}
         >
           <div>
-            <h2>{selectedFacility.properties.name}</h2>
-            <p>{selectedFacility.properties.address}</p>
+            <h2>{selectedFacility.IPS_name}</h2>
+            <p>{selectedFacility.address.address}</p>
           </div>
         </InfoWindow>
       )}
