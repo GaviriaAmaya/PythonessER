@@ -1,52 +1,62 @@
-import React, { Component, createRef } from 'react';
+import React, { useState, useEffect } from "react";
+import { withGoogleMap,withScriptjs, GoogleMap, Marker, InfoWindow } from "react-google-maps";
+import * as Facilitydata from "./data/ERPlaces.json";
 
-class GoogleMap extends Component {
-	googleMapRef = React.createRef()
+function MapwithMarkers() {
+  const [selectedFacility, setSelectedFacility] = useState(null);
 
-	
-	componentDidMount () {
-		const url = "https://maps.googleapis.com/maps/api/js?key=".concat(process.env.REACT_APP_GOOGLEKEY, "&libraries=places");
-		const scriptGoogle = document.createElement('script');
-		scriptGoogle.type = 'text/javascript'
-		scriptGoogle.src = url
-		window.document.body.appendChild(scriptGoogle)
+  return (
+    <GoogleMap
+      defaultZoom={10}
+      defaultCenter={{ lat: 45.4211, lng: -75.6903 }}
+    >
+      {Facilitydata.info.map(facility => (
+        <Marker
+          key={facility.properties.Facility_ID}
+          position={{
+            lat: facility.geometry.coordinates.lat,
+            lng: facility.geometry.coordinates.lng
+          }}
+          onClick={() => {
+            setSelectedFacility(Facility);
+          }}
+        />
+      ))}
 
-		//googleScript.addEventListener('load', {
-		scriptGoogle.addEventListener("load", () => {
-			this.googleMap = this.createGoogleMap();
-		});
-	}
-
-	createGoogleMap = () =>
-		new window.google.maps.Map(this.googleMapRef.current, {
-			zoom: 16,
-			center: { 
-				lat: 4.6097100,
-				lng: -74.0817500,
-			},
-			disableDefaultUI: false, 
-		})
-
-	createMarker = () =>
-	    //if (navigator.geolocation) {
-		//	navigator.geolocation.getCurrentPosition(function(position) {
-		//		let lati = position.coords.latitude;
-		//		let lngi = position.coords.longitude;
-		//	};
-
-		new window.google.maps.Marker({
-			position: { lat: 4.653007, lng: -74.052774 },
-			map: this.googleMap,
-		})
-
-	render (){
-		return ( 
-			<div
-				id="google-map"
-				ref={this.googleMapRef}
-				style={{ width: '300px', height: '400px' }}
-			/>
-		)
-	}
+      {selectedFacility && (
+        <InfoWindow
+          onCloseClick={() => {
+            setSelectedFacility(null);
+          }}
+          position={{
+            lat: selectedFacility.geometry.coordinates.lat,
+            lng: selectedFacility.geometry.coordinates.lng
+          }}
+        >
+          <div>
+            <h2>{selectedFacility.properties.NAME}</h2>
+            <p>{selectedFacility.properties.address}</p>
+          </div>
+        </InfoWindow>
+      )}
+    </GoogleMap>
+  );
 }
-export default GoogleMap;
+
+const MapWrapped = withScriptjs(withGoogleMap(MapwithMarkers));
+
+export default function Map() {
+  return (
+    <div style={{ width: "100vw", height: "100vh" }}>
+      <MapWrapped
+        googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${
+          process.env.REACT_APP_GOOGLE_KEY
+        }`}
+        loadingElement={<div style={{ height: `100%` }} />}
+        containerElement={<div style={{ height: `100%` }} />}
+        mapElement={<div style={{ height: `100%` }} />}
+      />
+    </div>
+  );
+}
+
