@@ -4,15 +4,15 @@ CREATE DATABASE IF NOT EXISTS EPS;
 USE EPS;
 
 CREATE TABLE IF NOT EXISTS Medimas (
-       Nombre VARCHAR(256) NOT NULL,
-       Direccion VARCHAR(256) NOT NULL,
-       Telefono VARCHAR(256)
+       Nombre VARCHAR(128) NOT NULL,
+       Dirección VARCHAR(128) NOT NULL,
+       Teléfono VARCHAR(32)
 );
 
 INSERT INTO Medimas (
        Nombre,
-       Direccion,
-       Telefono
+       Dirección,
+       Teléfono
 )
 
 VALUES
@@ -96,3 +96,30 @@ VALUES
 	'Cra. 8 No. 0 - 29 Sur',
 	'4077075 Ext. 10702'
 );
+
+CREATE TABLE IF NOT EXISTS Compensar (
+       Nombre VARCHAR(128) NOT NULL,
+       Dirección VARCHAR(128) NOT NULL,
+       Teléfono VARCHAR(128)
+);
+
+INSERT INTO Compensar (
+       Nombre,
+       Dirección,
+       Teléfono
+)
+VALUES
+('Unidad de Servicios Calle 26','Ac. 26 #66A-48','4441234'),
+('Unidad de Servicios Calle 42','Cl. 42 #13-19, Bogotá','4441234'),
+('Unidad de Servicios Suba','Calle 139 No. 94 - 55','4441234'),
+('SEDATO','Avda. Calle 127 No 19 A-28','6141912'),
+('Unidad de Servicios Av. 1 de Mayo','Av. 1 de mayo 10 bis - 22','4441234'),
+('Unidad de Servicios Kennedy I','Transversal 78 H # 41C - 48 sur','4441234'),
+('Compañía Clínica de Asistencia Odontológica Salud Oral','Carrera 20 No. 78 -72 Local 47 Centro Comercial Héroes','2560649'),
+('Hospital Universitario Clínica San Rafael','Kr.8 No.17-45 Sur','3282300'),
+('Hospital San José Sociedad de Cirugía Bogotá','Calle 10 No. 18-75','3538000'),
+('Hospital Universitario Mayor - MÉDERI','Calle 24 No. 29 -61','4877070'),
+('Clínica CORPAS','Avenida Suba - Corpas Kilómetro 3','3078023'),
+('Compensar - Cruz Roja Colombiana Seccional Cund. Sede:Calle145','AUTOP. Norte con Calle 145 / Avenida Carrera 45 No. 145 - 64','7460909'),
+('Compensar - Cruz Roja Colombiana Seccional Cund. Sede:Alquería','Avenida Carrera 68 No. 31 - 41 SUR','7460909'),
+('Cruz Roja Colombiana Seccional Cundinamarca Sede:Calle 68','Avenida Carrera 68 No. 68 B - 31','7460909');
