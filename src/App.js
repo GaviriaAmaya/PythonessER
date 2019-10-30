@@ -10,9 +10,9 @@ import Googlemaps from './Components/Maps'
 
 export default class App extends Component {
   
-  //state = {
-    //tasks: 
-  //}
+  state = {
+    tasks: Googlemaps 
+  }
   
   render() { 
   return <div className='container'>
