@@ -9,7 +9,6 @@ function MapwithMarkers() {
     <GoogleMap
       defaultZoom={10}
       defaultCenter={{ lat: 45.4211, lng: -75.6903 }}
-      defaultOptions={{ styles: mapStyles }}
     >
       {FacilityData.features.map(facility => (
         <Marker
@@ -31,7 +30,7 @@ function MapwithMarkers() {
           }}
           position={{
             lat: selectedFacility.coordinates.lat,
-            lng: selectedPark.coordinates.lng
+            lng: selectedFacility.coordinates.lng
           }}
         >
           <div>
