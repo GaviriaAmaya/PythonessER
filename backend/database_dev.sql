@@ -1,4 +1,6 @@
 -- Create the SQL databases
+DROP DATABASE EPS;
+
 CREATE DATABASE IF NOT EXISTS EPS;
 
 USE EPS;
