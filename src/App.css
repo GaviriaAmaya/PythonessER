@@ -1,9 +1,3 @@
-.Epslist {
-  width: 100%;
-  height: 100%;
-  flex-direction: row-reverse;
-}
-
 html, body, .container, #root {
   width: 100%;
   height: 100%;
@@ -12,6 +6,8 @@ html, body, .container, #root {
 }
 
 .lists {
-  display: flex;
-  justify-content: flex-start;
+  position: inherit;
+  z-index: 1;
+  top: 9%;
+  left: 1%;
 }
