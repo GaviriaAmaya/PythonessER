@@ -8,6 +8,24 @@ import Location from './Components/Location'
 import Emergencys from './Components/Emergencys';
 import Googlemaps from './Components/Maps'
 
+// Connection to MySQL
+let mysql = require("mysql");
+
+app.use(function(req, res, next) {
+  res.locals.connection = mysql.createConnection( {
+    host     : 'localhost',
+    user     : 'root',
+    password : '',
+    database : 'EPS'
+    });
+  res.locals.connect();
+  next();
+});
+
+app.use('/', index);
+app.use('/src/Components/Eps', Eps);
+
+
 export default class App extends Component {
   
   //state = {
