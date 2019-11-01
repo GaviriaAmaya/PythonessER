@@ -3,13 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+
     "google-map-react": "^1.1.5",
     "google-maps-react": "^2.0.2",
+
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-flexview": "^4.0.4",
     "react-google-maps": "^9.4.5",
+
     "react-places-autocomplete": "^7.2.1",
+
     "react-scripts": "3.2.0",
     "simple-flexbox": "^2.3.0"
   },
