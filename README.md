@@ -4,8 +4,8 @@
 </p>
 
 <p align="center">
-  <img src="Logo"
-       alt="PythonessER logo"
+  <img src="./PythonessER"
+       alt="PythonessER"
   />
 </p>
 
