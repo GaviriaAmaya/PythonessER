@@ -4,7 +4,7 @@
 </p>
 
 <p align="center">
-  <img src="./public/logo512.png"
+  <img src="./public/logo192.png"
        alt="PythonessER"
   />
 </p>
