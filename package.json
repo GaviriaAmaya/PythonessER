@@ -7,6 +7,7 @@
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-flexview": "^4.0.4",
+    "react-google-maps": "^9.4.5",
     "react-scripts": "3.2.0",
     "simple-flexbox": "^2.3.0"
   },
