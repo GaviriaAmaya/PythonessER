@@ -1,0 +1,134 @@
+{
+   "IPS_list": [
+      {
+         "IPS_name": "Salud Vital Chapinero",
+         "IPS_id": 0,
+         "address": {
+            "address": "Cl. 49 #13-61",
+            "lat": 4.656112,
+            "lng": -74.065704
+         },
+         "telephone": 7454949
+      },
+      {
+         "IPS_name": "Nueva EPS IPS Andar Kennedy",
+         "IPS_id": 1,
+         "address": {
+            "address": "Cra. 78d #40 Sur-59 a 40 Sur-75, Bogotá",
+            "lat": 4.620107,
+            "lng": -74.15391
+         },
+         "telephone": 7454949
+      },
+      {
+         "IPS_name": "Comunidad Hermanas Hospitalarias del Sagrado Corazón de Jesus-Clínica Inmaculada ",
+         "IPS_id": 2,
+         "address": {
+            "address": "Cra. 7 N° 68 - 70",
+            "lat": 4.651747,
+            "lng": -74.05697
+         },
+         "telephone": 5870366
+      },
+      {
+         "IPS_name": "Fundación Cardio Infantil Instituto de Cardiología",
+         "IPS_id": 3,
+         "address": {
+            "address": "Cll. 163 # 13- 60",
+            "lat": 4.74153,
+            "lng": -74.03443
+         },
+         "telephone": 7490404
+      },
+      {
+         "IPS_name": "Clínica Palermo - Congregación de Las Hermanas de La Caridad Dominicas de La Presentación de La Santísima Virgen",
+         "IPS_id": 4,
+         "address": {
+            "address": "Cra. 23 N° 45 C - 31",
+            "lat": 4.636323,
+            "lng": -74.07414
+         },
+         "telephone": 7420550
+      },
+      {
+         "IPS_name": "Fundación Abood Shaio",
+         "IPS_id": 5,
+         "address": {
+            "address": "Diag. 111 A N° 70 C - 75",
+            "lat": 4.698514,
+            "lng": -74.072716
+         },
+         "telephone": 7423330
+      },
+      {
+         "IPS_name": "Inversiones Sequoia Colombia S.A.S - Clínica V.I.P",
+         "IPS_id": 6,
+         "address": {
+            "address": "Cll. 97 N° 23 - 10 ",
+            "lat": 4.685057,
+            "lng": -74.05638
+         },
+         "telephone": 7454949
+      },
+      {
+         "IPS_name": "Clínica Universidad de la Sabana",
+         "IPS_id": 7,
+         "address": {
+            "address": "Autopista Nte. #Km 7, Puente Del Comun, Chía, Cundinamarca",
+            "lat": 4.863766,
+            "lng": -74.02909
+         },
+         "telephone": 3077077
+      },
+      {
+         "IPS_name": "Urobosque S.A.",
+         "IPS_id": 8,
+         "address": {
+            "address": " Cra. 32 N° 25 B - 80  ",
+            "lat": 4.628379,
+            "lng": 74.082184
+         },
+         "telephone": 7454949
+      },
+      {
+         "IPS_name": "Clínica Nueva ",
+         "IPS_id": 9,
+         "address": {
+            "address": "Cll. 45 F N° 16 A - 11",
+            "lat": 4.634472,
+            "lng": -74.070786
+         },
+         "telephone": 3058152673
+      },
+      {
+         "IPS_name": "Fundación Niñez y Desarrollo FND Colombia",
+         "IPS_id": 10,
+         "address": {
+            "address": "Av. Cra. 60 N° 63 - 63 ",
+            "lat": 4.664418,
+            "lng": -74.08566
+         },
+         "telephone": 7454949
+      },
+      {
+         "IPS_name": "Unifisio LTDA",
+         "IPS_id": 11,
+         "address": {
+            "address": "Cra. 23 N° 45 C - 31 Cons. 609 - 610 ",
+            "lat": 4.63639,
+            "lng": -74.07375
+         },
+         "telephone": 2875946
+      },
+      {
+         "IPS_name": "Kai Chen Hung Chang",
+         "IPS_id": 12,
+         "address": {
+            "address": "Cll. 71 N° 11 - 52 ",
+            "lat": 4.657019,
+            "lng": -74.059586
+         },
+         "telephone": 2488880
+      }
+   ]
+}
