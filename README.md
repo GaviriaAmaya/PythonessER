@@ -62,7 +62,4 @@ PythonessER is currently deployed at [PythonessER.site](https://ideadog.site)
 - **Juan Diego Alejandro Valencia** <[Jdavp](https://github.com/Jdavp)>
 - **Juan David Amaya Gaviria** <[GaviriaAmaya](https://github.com/GaviriaAmaya)>
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
